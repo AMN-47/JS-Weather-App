@@ -12,9 +12,9 @@ weatherForm.addEventListener("submit", event => {
 
     }
     else {
-        displayError("Please Enter a city")
+        displayError("Please Enter a city");
     }
- })
+ });
 
 async function getWeatherData(city) {
 
@@ -29,5 +29,11 @@ function getWeatherEmoji(weatherId) {
 }
 
 function displayError(message) {
+    const errorDisplay = document.createElement("p");
+    errorDisplay.textContent = message;
+    errorDisplay.classList.add("errorDisplay");
 
+    card.textContent = "";
+    card.style.display = "flex";
+    card.appendChild(errorDisplay);
 }
