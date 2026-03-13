@@ -5,7 +5,16 @@ const apiKey = "73a14e7935995da20228876316ea1e06"; //Dont use this pls, use your
 
 weatherForm.addEventListener("submit", event => {
     event.preventDefault(); //prevents default of page refresh on form
-})
+
+    const city = cityInput.value;
+
+    if (city) {
+
+    }
+    else {
+        displayError("Please Enter a city")
+    }
+ })
 
 async function getWeatherData(city) {
 
