@@ -34,7 +34,12 @@ async function getWeatherData(city) {
 }
 
 function displayWatherInfo(data) {
+    const {name: city,
+        main: {temp, humidity}, 
+        weather:[{description, id}]} = data;
 
+    card.textContent = "";
+    card.style.display = "flex"
 }
 
 function getWeatherEmoji(weatherId) {
