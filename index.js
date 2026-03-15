@@ -49,12 +49,15 @@ function displayWatherInfo(data) {
 
     cityDisplay.textContent = city;
     tempDisplay.textContent = `${(temp - 273.15).toFixed(1)}°C`
+    humidityDisplay.textContent = `Humidity: ${humidity}`
 
     cityDisplay.classList.add("cityDisplay");
     tempDisplay.classList.add("tempDisplay");
+    humidityDisplay.classList.add("humidityDisplay");
 
     card.appendChild(cityDisplay);
-    card.appendChild(tempDisplay)
+    card.appendChild(tempDisplay);
+    card.appendChild(humidityDisplay);
 
 }
 
