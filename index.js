@@ -39,7 +39,21 @@ function displayWatherInfo(data) {
         weather:[{description, id}]} = data;
 
     card.textContent = "";
-    card.style.display = "flex"
+    card.style.display = "flex";
+
+    const cityDisplay = document.createElement("h1");
+    const tempDisplay = document.createElement("p");
+    const humidityDisplay = document.createElement("p");
+    const descDisplay = document.createElement("p");
+    const getWeatherEmoji = document.createElement("p");
+
+    cityDisplay.textContent = city;
+    
+
+    cityDisplay.classList.add("cityDisplay")
+
+    card.appendChild(cityDisplay);
+
 }
 
 function getWeatherEmoji(weatherId) {
